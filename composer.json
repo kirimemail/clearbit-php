@@ -1,0 +1,21 @@
+{
+    "name": "kirimemail/clearbit-php",
+    "description": "(unofficial) PHP SDK for Clearbit",
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "~6.0",
+        "php": "~7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Clearbit\\": "src/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Reka Prihatanto",
+            "email": "rey.barrolz@gmail.com"
+        }
+    ]
+}
