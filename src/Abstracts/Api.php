@@ -66,6 +66,12 @@ abstract class Api
         ]);
         $status = $response->getStatusCode();
 
-        return $status === $successCode;
+        if ($status === 200) {
+            $returnData = json_decode($response->getBody());
+        } else {
+            throw new ApiException($status);
+        }
+
+        return $returnData;
     }
 }

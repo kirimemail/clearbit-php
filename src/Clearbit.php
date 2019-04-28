@@ -43,24 +43,11 @@ class Clearbit
         self::$httpClient = $client;
     }
 
-    public static function createEnrichmentApi()
+    public static function createRiskApi()
     {
-        return new EnrichmentApi(self::$clearbitKey, self::$httpClient);
+        return new RiskApi(self::$clearbitKey, self::$httpClient);
     }
 
-    public function enrichmentApi()
-    {
-        return new EnrichmentApi($this->getKey(), self::$httpClient);
-    }
-
-    public static function createGetRisk()
-    {
-        return new getRiskApi(self::$clearbitKey, self::$httpClient);
-    }
-    public function getRisk()
-    {
-        return new getRiskApi($this->getKey(), self::$httpClient);
-    }
 
 
 

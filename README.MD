@@ -28,54 +28,16 @@ use Kirimemail\clearbit\Clearbit;
 Clearbit::setKey('token');
 ```
 
-#### Configuring endpoint behavior
 
-By default, Clearbit transmits data to a webhook if data is not immediately available. You can configure an endpoint url to receive webhooks, or you can use the steaming API to wait for results.
 
-```php
-$enrichment = Clearbit::createEnrichmentApi();
-
-// Webhook endpoint
-$enrichment->setWebhookEndpoint('https://test.com/api/webhook');
-
-// Streaming
-$enrichment->enableStreaming();
-```
-
-#### Get combined (person and company) data
+#### Calculates an associated risk score
 
 ```php
-$enrichment = Clearbit::createEnrichmentApi();
-$enrichment->combined('test@test.com');
+$enrichment = Clearbit::createRiskApi();
+$enrichment->person([ 'email' => 'test@test.com', 'ip' => '127.0.0.1']);
 ```
 
-#### Get person data
 
-```php
-$enrichment = Clearbit::createEnrichmentApi();
-$enrichment->person('test@test.com');
-```
-
-To subscribe to updates:
-
-```php
-$enrichment = Clearbit::createEnrichmentApi();
-$enrichment->person('test@test.com', true);
-```
-
-#### Get company data
-
-```php
-$enrichment = Clearbit::createEnrichmentApi();
-$enrichment->company('test.com');
-```
-
-#### Name To Domain
-
-```php
-$nameToDomain = Clearbit::createNameToDomain();
-$nameToDomain->get('Segment');
-```
 
 
 
