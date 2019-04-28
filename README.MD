@@ -1,9 +1,5 @@
 # Clearbit PHP API Client
 
-[![Latest Version on Packagist][ico-version]][link-packagist]
-[![Software License][ico-license]](LICENSE.md)
-[![Total Downloads][ico-downloads]][link-downloads]
-
 Clearbit API Client. Currently supporting the Enrichment API, but the entire API is on the roadmap for implementation. The current implementation uses v2 endpoints.
 
 ## Install
