@@ -29,8 +29,8 @@ Clearbit::setKey('token');
 #### Calculates an associated risk score
 
 ```php
-$enrichment = Clearbit::createRiskApi();
-$enrichment->person([ 'email' => 'test@test.com', 'ip' => '127.0.0.1']);
+$calculate = Clearbit::createRiskApi();
+$calculate->risk([ 'email' => 'test@test.com', 'ip' => '127.0.0.1']);
 ```
 
 
