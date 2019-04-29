@@ -19,7 +19,7 @@ This implementation supports using one or multiple api keys. If a single key is 
 All of the following examples assume the following step:
 
 ```php
-use Kirimemail\clearbit\Clearbit;
+use Kirimemail\Clearbit\Clearbit;
 
 Clearbit::setKey('token');
 ```
